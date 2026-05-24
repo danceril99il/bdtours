@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Primary SEO Tags -->
+  <title data-translate="site_title">BDTours | Premium Couples & Family Vacations in Europe & City Breaks</title>
+  <meta name="description" content="Discover romantic Santorini suites, historic Rome and Bucharest city breaks, and all-inclusive Bulgarian resorts. Direct fair prices.">
+  <meta name="keywords" content="family vacations europe, romantic couples getaways, city breaks italy, santorini suites, bucharest getaway, bulgaria resorts, best deal tours, bdtours">
+  <meta name="robots" content="index, follow">
+  
+  <!-- OpenGraph Metadata (Social Media Enrichment) -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Best Deal Tours">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BDTours | Premium Couples & Family Vacations in Europe & City Breaks">
+  <meta property="og:description" content="Boutique vacation packages in Greece, Italy, Romania, and Bulgaria. Book directly for standard-setting fair pricing, zero agency fees, and local support.">
+  <meta property="og:image" content="assets/images/hero_bg.png">
+  <meta property="og:url" content="https://bestdealtours.com">
+  
+  <!-- Stylesheets & Fonts -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="assets/images/eco_logo.svg" type="image/svg+xml">
+  <!-- FontAwesome Icons Cloudflare -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION BAR (FROSTED GLASSBAR)
+       ========================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="logo" id="logo-nav">
+        <img src="assets/images/eco_logo.svg" alt="BDTours Logo">
+        <span>BDTours</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link" data-translate="nav_home">Home</a></li>
+          <li><a href="#destinations" class="nav-link" data-translate="nav_vacations">Vacations</a></li>
+          <li><a href="#booking" class="nav-link" data-translate="nav_booking">Quick Booking</a></li>
+          <li><a href="#blog" class="nav-link" data-translate="nav_blog">Travel Blog</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-actions">
+        <!-- Elegant EN/HE Language Selector Toggle -->
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="he">עב</button>
+        </div>
+        <a href="#booking" class="btn btn-secondary" id="inquire-nav-btn" data-translate="btn_inquire">Inquire Now</a>
+        <a href="#destinations" class="btn btn-primary" id="book-nav-btn" data-translate="btn_book_direct">Book Direct</a>
+      </div>
+      
+      <button class="hamburger" id="mobile-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO BANNER & VALUE PROPOSITION
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="badge" data-translate="hero_badge"><i class="fa-solid fa-plane-departure"></i> Premium European Getaways</span>
+          <h1 data-translate="hero_title">Quality Vacations at <span class="gradient-text-teal-orange">Fair Prices</span></h1>
+          <p data-translate="hero_desc">Indulge in romantic couples retreats, memorable family vacations, and curated city breaks across Italy, Greece, Romania, and Bulgaria. Handpicked quality stays with zero intermediary markups.</p>
+          <div class="hero-buttons">
+            <a href="#destinations" class="btn btn-primary" id="hero-cta-primary" data-translate="hero_cta_primary">View Packages <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#booking" class="btn btn-secondary" id="hero-cta-secondary" data-translate="hero_cta_secondary">Custom Quote</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label" data-translate="stat_countries">Core Countries</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label" data-translate="stat_verified">Verified Stays</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4.9★</span>
+              <span class="stat-label" data-translate="stat_trust">Client Trust</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-image-wrapper">
+          <div class="hero-main-img">
+            <!-- Dynamic bind from app.js config -->
+            <img id="hero-img" src="" alt="Romantic Santorini sunset overlook caldera cliffside houses">
+          </div>
+          <div class="hero-floating-card animate-float">
+            <div class="floating-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+            <div class="floating-text">
+              <h4 data-translate="floating_card_title">Direct-Rate Guarantee</h4>
+              <p data-translate="floating_card_desc">Best price guarantee. Zero hidden agency commissions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       DESTINATIONS SHOWCASE (DYNAMIC FILTERING)
+       ========================================== -->
+  <section class="section-padding" id="destinations">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge" data-translate="dest_badge"><i class="fa-solid fa-hotel"></i> Handpicked Stays</span>
+        <h2 data-translate="dest_title">Couples &amp; Family Vacation Packages</h2>
+        <p data-translate="dest_desc">Book directly to enjoy fully coordinated excursions, local guide access, and handpicked hotel upgrades at clear, fair prices.</p>
+      </div>
+      
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all" data-translate="tab_all">All Vacations</button>
+        <button class="tab-btn" data-filter="family" data-translate="tab_family">Family Vacations</button>
+        <button class="tab-btn" data-filter="city" data-translate="tab_city">City Breaks</button>
+        <button class="tab-btn" data-filter="beach" data-translate="tab_beach">Beach &amp; Islands</button>
+      </div>
+      
+      <!-- Row 1: Family Longer Holidays -->
+      <div class="dest-row-container">
+        <h3 class="dest-row-title" data-translate="dest_row_family_title">Family longer holiday for 2 adults and up to 2 children</h3>
+        <div class="destination-grid">
+          
+          <!-- Card 1: Rhodes All-Inclusive Family Palace (Greece) [NEW] -->
+          <article class="dest-card" data-category="beach family">
+            <div class="dest-img-container">
+              <img id="img-santorini" src="" alt="Rodos Palace Hotel in Rhodes, Greece with gardens and pools">
+              <div class="dest-badges">
+                <span class="dest-tag accent-teal" data-translate="tag_greece">Greece Family</span>
+                <span class="dest-tag accent-orange" data-translate="tag_family_deal">All Inclusive</span>
+              </div>
+              <div class="dest-price-badge">
+                <span class="dest-price-val" id="card-price-santorini">$5058</span>
+                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
+              </div>
+            </div>
+            <div class="dest-info">
+              <div class="dest-meta">
+                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_rhodes_time">6 Nights</span></span>
+                <span><i class="fa-solid fa-users"></i> <span data-translate="meta_rhodes_guests">2 Adults + 2 Kids</span></span>
+              </div>
+              <h3 data-translate="title_rhodes">Rhodes All-Inclusive Family Resort</h3>
+              <p data-translate="desc_rhodes">Unforgettable family retreat! 6 nights in a 5-star premium resort (Rodos Palace / Lindos Royal). Includes direct Aegean Airlines flights, 20kg luggage + 7kg trolley, private transfers, and personal agent support!</p>
+              <div class="dest-actions">
+                <div class="dest-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="dest-rating-val">4.96</span>
+                  <span class="dest-rating-count" data-translate="reviews_count_1">(112 reviews)</span>
+                </div>
+                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="santorini" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Bulgaria Golden Sands Resort (Bulgaria) -->
+          <article class="dest-card" data-category="beach family">
+            <div class="dest-img-container">
+              <img id="img-bulgaria" src="" alt="Beautiful sunlit European seaside bay and resort pools">
+              <div class="dest-badges">
+                <span class="dest-tag accent-teal" data-translate="tag_bulgaria">Bulgaria Beach</span>
+                <span class="dest-tag accent-orange" data-translate="tag_family_choice">Family Choice</span>
+              </div>
+              <div class="dest-price-badge">
+                <span class="dest-price-val" id="card-price-bulgaria">$4668</span>
+                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
+              </div>
+            </div>
+            <div class="dest-info">
+              <div class="dest-meta">
+                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_bulgaria_time">6 Nights</span></span>
+                <span><i class="fa-solid fa-umbrella-beach"></i> <span data-translate="meta_bulgaria_guests">2 Adults + 2 Kids</span></span>
+              </div>
+              <h3 data-translate="title_bulgaria">Varna All-Inclusive Family Resort</h3>
+              <p data-translate="desc_bulgaria">High-quality family beach holiday in Varna, Bulgaria! 6 nights in a 4 or 5-star premium resort (Prestige Deluxe Aquapark / International Casino). Includes direct Israir flights, 20kg luggage + 8kg trolley, private transfers, and personal agent support.</p>
+              <div class="dest-actions">
+                <div class="dest-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="dest-rating-val">4.88</span>
+                  <span class="dest-rating-count" data-translate="reviews_count_4">(104 reviews)</span>
+                </div>
+                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="bulgaria" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      
+      <!-- Row 2: Couples Short City Break Escapes -->
+      <div class="dest-row-container" style="margin-top: 60px;">
+        <h3 class="dest-row-title" data-translate="dest_row_couples_title">Couples short city break escape</h3>
+        <div class="destination-grid">
+          
+          <!-- Card 3: Budapest Weekend City Break (Hungary) [NEW] -->
+          <article class="dest-card" data-category="city">
+            <div class="dest-img-container">
+              <img id="img-budapest" src="" alt="Beautiful Parliament building in Budapest, Hungary at sunset next to Danube river">
+              <div class="dest-badges">
+                <span class="dest-tag accent-teal" data-translate="tag_hungary">Budapest Deal</span>
+                <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
+              </div>
+              <div class="dest-price-badge">
+                <span class="dest-price-val" id="card-price-budapest">$680</span>
+                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
+              </div>
+            </div>
+            <div class="dest-info">
+              <div class="dest-meta">
+                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_budapest_time">4-Night Long Weekend</span></span>
+                <span><i class="fa-solid fa-plane"></i> <span data-translate="meta_budapest_flights">Wizz Air Included</span></span>
+              </div>
+              <h3 data-translate="title_budapest">Budapest 4-Night Weekend Getaway</h3>
+              <p data-translate="desc_budapest">A bomb price deal! 4 nights in central boutique hotels, direct flights, personal agent coordination, and hand/trolley bags included. Unmatched city break deal.</p>
+              <div class="dest-actions">
+                <div class="dest-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="dest-rating-val">4.98</span>
+                  <span class="dest-rating-count" data-translate="reviews_count_5">(41 reviews)</span>
+                </div>
+                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="budapest" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Bucharest Weekend Holiday (Romania) [NEW] [MIDDLE SPOT] -->
+          <article class="dest-card" data-category="city">
+            <div class="dest-img-container">
+              <img id="img-bucharest" src="" alt="Romanian Athenaeum in Bucharest with flower gardens at sunset">
+              <div class="dest-badges">
+                <span class="dest-tag accent-teal" data-translate="tag_romania">Romania</span>
+                <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
+              </div>
+              <div class="dest-price-badge">
+                <span class="dest-price-val" id="card-price-bucharest">$630</span>
+                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
+              </div>
+            </div>
+            <div class="dest-info">
+              <div class="dest-meta">
+                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_bucharest_time">4-Night Long Weekend</span></span>
+                <span><i class="fa-solid fa-plane"></i> <span data-translate="meta_bucharest_flights">Wizz Air Included</span></span>
+              </div>
+              <h3 data-translate="title_bucharest">Bucharest 4-Night Relaxing Getaway</h3>
+              <p data-translate="desc_bucharest">Spend a relaxing 4-night weekend in central boutique hotels. Includes direct Wizz Air flights, hand bag + 20kg luggage, personal agent support, and VIP priority car rental options!</p>
+              <div class="dest-actions">
+                <div class="dest-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="dest-rating-val">4.96</span>
+                  <span class="dest-rating-count" data-translate="reviews_count_2">(92 reviews)</span>
+                </div>
+                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="bucharest" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Cyprus Larnaca Beach & City Break (Cyprus) [NEW] -->
+          <article class="dest-card" data-category="beach city">
+            <div class="dest-img-container">
+              <img id="img-cyprus" src="" alt="Beautiful historic Church of Saint Lazarus in Larnaca, Cyprus under a bright blue sky">
+              <div class="dest-badges">
+                <span class="dest-tag accent-teal" data-translate="tag_cyprus">Cyprus Deal</span>
+                <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
+              </div>
+              <div class="dest-price-badge">
+                <span class="dest-price-val" id="card-price-cyprus">$565</span>
+                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
+              </div>
+            </div>
+            <div class="dest-info">
+              <div class="dest-meta">
+                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_cyprus_time">4-Night Long Weekend</span></span>
+                <span><i class="fa-solid fa-plane"></i> <span data-translate="meta_cyprus_flights">Aegean/Arkia Included</span></span>
+              </div>
+              <h3 data-translate="title_cyprus">Cyprus Larnaca 4-Night Beach &amp; City Break</h3>
+              <p data-translate="desc_cyprus">A dream summer getaway! 4 nights and 5 full days in premium handpicked hotels, direct flights, personal agent coordination, and hand/trolley bags included.</p>
+              <div class="dest-actions">
+                <div class="dest-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="dest-rating-val">4.95</span>
+                  <span class="dest-rating-count" data-translate="reviews_count_6">(58 reviews)</span>
+                </div>
+                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="cyprus" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Mykonos Beach Couples Escape (Greece) [NEW] -->
+          <article class="dest-card" data-category="beach">
+            <div class="dest-img-container">
+              <img id="img-mykonos" src="" alt="Beautiful beach front hotel Erato in Mykonos, Greece with sea view">
+              <div class="dest-badges">
+                <span class="dest-tag accent-teal" data-translate="tag_mykonos">Mykonos Deal</span>
+                <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
+              </div>
+              <div class="dest-price-badge">
+                <span class="dest-price-val" id="card-price-mykonos">$1266</span>
+                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
+              </div>
+            </div>
+            <div class="dest-info">
+              <div class="dest-meta">
+                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_mykonos_time">5-Night Summer Escape</span></span>
+                <span><i class="fa-solid fa-plane"></i> <span data-translate="meta_mykonos_flights">Blue Bird Flights Included</span></span>
+              </div>
+              <h3 data-translate="title_mykonos">Mykonos Erato Hotel 5-Night Couples Break</h3>
+              <p data-translate="desc_mykonos">A midsummer night's dream in Mykonos, Greece! 5 nights in a beautiful beach-adjacent hotel (Erato Hotel). Includes direct Blue Bird flights, luggage, and 24/7 personal agent accompaniment!</p>
+              <div class="dest-actions">
+                <div class="dest-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <span class="dest-rating-val">4.92</span>
+                  <span class="dest-rating-count" data-translate="reviews_count_7">(76 reviews)</span>
+                </div>
+                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="mykonos" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       DYNAMIC BOOKING & INQUIRY FORM
+       ========================================== -->
+  <section class="section-padding booking-section" id="booking">
+    <div class="container">
+      <div class="booking-grid">
+        <div class="booking-benefits">
+          <span class="badge" data-translate="benefits_badge"><i class="fa-solid fa-scale-balanced"></i> Fair Rates Guarantee</span>
+          <h2 data-translate="benefits_title">Quality Vacation Deals, Zero Agency Padding</h2>
+          <p data-translate="benefits_desc">BDTours is built on direct partner relationships. By coordinating directly with verified boutique hotels, chalets, and sightseeing companies, we deliver premium travel quality at extremely fair prices.</p>
+          
+          <div class="benefit-card-list">
+            <div class="benefit-card">
+              <div class="benefit-icon"><i class="fa-solid fa-tag"></i></div>
+              <div class="benefit-info">
+                <h4 data-translate="benefit_1_title">Good &amp; Honest Pricing</h4>
+                <p data-translate="benefit_1_desc">Enjoy luxury and comfort without excessive intermediary markups or hidden fees.</p>
+              </div>
+            </div>
+            <div class="benefit-card orange">
+              <div class="benefit-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+              <div class="benefit-info">
+                <h4 data-translate="benefit_2_title">Perfect Couples &amp; Family Care</h4>
+                <p data-translate="benefit_2_desc">Enjoy custom add-on upgrades designed specifically for romantic dates or family excursions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Interactive Multi-Step pricing estimator booking form -->
+        <div class="booking-form-box">
+          
+          <!-- Success State -->
+          <div class="booking-success-overlay" id="success-overlay">
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3 data-translate="success_title">Inquiry Submitted!</h3>
+            <p data-translate="success_desc">Your BDTours vacation guide has been notified. A custom itinerary and direct quote proposal is on its way to your inbox!</p>
+            <button class="btn btn-secondary" id="reset-form-btn" data-translate="btn_new_form">New Booking Form</button>
+          </div>
+
+          <!-- Interactive Multi-Step Funnel Wizard -->
+          <div class="funnel-container" id="funnel-container">
+            <!-- Progress Bar -->
+            <div class="funnel-progress-container">
+              <div class="funnel-progress-text"><span data-translate="funnel_step">שלב</span> <span id="funnel-step-num">1</span>/8</div>
+              <div class="funnel-progress-track">
+                <div class="funnel-progress-bar" id="funnel-progress"></div>
+              </div>
+            </div>
+
+            <!-- Chatbot Agent Bubble -->
+            <div class="funnel-assistant">
+              <div class="assistant-avatar">
+                <i class="fa-solid fa-user-tie" id="assistant-avatar-icon"></i>
+              </div>
+              <div class="assistant-bubble">
+                <p id="assistant-text" data-translate="funnel_q1">היי! בואו נתחיל. מי מצטרף אליכם לחופשה החלומית שלכם?</p>
+              </div>
+            </div>
+
+            <!-- Step Containers -->
+            <div class="funnel-steps-wrapper">
+              
+              <!-- Step 1: Composition -->
+              <div class="funnel-step active" data-step="1">
+                <div class="funnel-btn-grid cols-2">
+                  <button type="button" class="funnel-btn magnetic-button" data-val="משפחה">
+                    <i class="fa-solid fa-people-roof"></i>
+                    <span data-translate="funnel_opt_family">משפחה</span>
+                  </button>
+                  <button type="button" class="funnel-btn magnetic-button" data-val="זוג">
+                    <i class="fa-solid fa-user-friends"></i>
+                    <span data-translate="funnel_opt_couple">זוג</span>
+                  </button>
+                  <button type="button" class="funnel-btn magnetic-button" data-val="רק אני">
+                    <i class="fa-solid fa-person-walking-luggage"></i>
+                    <span data-translate="funnel_opt_solo">רק אני</span>
+                  </button>
+                  <button type="button" class="funnel-btn magnetic-button" data-val="חברים">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span data-translate="funnel_opt_friends">חברים</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2: Months -->
+              <div class="funnel-step" data-step="2">
+                <div class="funnel-btn-grid cols-3 month-grid">
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="יוני"><span data-translate="month_june">יוני</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="יולי"><span data-translate="month_july">יולי</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="אוגוסט"><span data-translate="month_august">אוגוסט</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="ספטמבר"><span data-translate="month_september">ספטמבר</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="אוקטובר"><span data-translate="month_october">אוקטובר</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="נובמבר"><span data-translate="month_november">נובמבר</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="דצמבר"><span data-translate="month_december">דצמבר</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="ינואר"><span data-translate="month_january">ינואר</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="פברואר"><span data-translate="month_february">פברואר</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="מרץ"><span data-translate="month_march">מרץ</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="אפריל"><span data-translate="month_april">אפריל</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="מאי"><span data-translate="month_may">מאי</span><i class="fa-solid fa-circle-check"></i></button>
+                </div>
+                <div class="funnel-nav-row">
+                  <button type="button" class="btn btn-secondary funnel-prev"><i class="fa-solid fa-arrow-right"></i> <span data-translate="funnel_back">חזרה</span></button>
+                  <button type="button" class="btn btn-primary funnel-next"><span data-translate="funnel_continue">ממשיכים</span> <i class="fa-solid fa-arrow-left"></i></button>
+                </div>
+              </div>
+
+              <!-- Step 3: Destinations -->
+              <div class="funnel-step" data-step="3">
+                <button type="button" class="funnel-btn skip-btn magnetic-button" id="dest-all-fits">
+                  <span data-translate="funnel_all_fits">הכל מתאים לי / פתוח להצעות</span>
+                </button>
+                <div class="funnel-btn-grid cols-2">
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="יוון והאיים"><span data-translate="dest_greece">יוון והאיים</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="קפריסין"><span data-translate="dest_cyprus">קפריסין</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="הונגריה (בודפשט)"><span data-translate="dest_hungary">הונגריה (בודפשט)</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="רומניה (בוקרשט)"><span data-translate="dest_romania">רומניה (בוקרשט)</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="בולגריה (וארנה)"><span data-translate="dest_bulgaria">בולגריה (וארנה)</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="אירופה"><span data-translate="dest_europe">שאר אירופה</span><i class="fa-solid fa-circle-check"></i></button>
+                </div>
+                <div class="funnel-nav-row">
+                  <button type="button" class="btn btn-secondary funnel-prev"><i class="fa-solid fa-arrow-right"></i> <span data-translate="funnel_back">חזרה</span></button>
+                  <button type="button" class="btn btn-primary funnel-next"><span data-translate="funnel_continue">ממשיכים</span> <i class="fa-solid fa-arrow-left"></i></button>
+                </div>
+              </div>
+
+              <!-- Step 4: Nights -->
+              <div class="funnel-step" data-step="4">
+                <div class="funnel-btn-grid cols-4 nights-grid">
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="3 לילות"><span>3</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="4 לילות"><span>4</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="5 לילות"><span>5</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="6 לילות"><span>6</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="7 לילות"><span>7</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="8 לילות"><span>8</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="9 לילות"><span>9</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="10+ לילות"><span>10+</span><i class="fa-solid fa-circle-check"></i></button>
+                </div>
+                <div class="funnel-nav-row">
+                  <button type="button" class="btn btn-secondary funnel-prev"><i class="fa-solid fa-arrow-right"></i> <span data-translate="funnel_back">חזרה</span></button>
+                  <button type="button" class="btn btn-primary funnel-next"><span data-translate="funnel_continue">ממשיכים</span> <i class="fa-solid fa-arrow-left"></i></button>
+                </div>
+              </div>
+
+              <!-- Step 5: Style -->
+              <div class="funnel-step" data-step="5">
+                <button type="button" class="funnel-btn skip-btn magnetic-button" id="style-all-fits">
+                  <span data-translate="funnel_all_fits">הכל מתאים לי / פתוח להצעות</span>
+                </button>
+                <div class="funnel-btn-grid cols-2">
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="בטן-גב וחופים"><span data-translate="style_beach">בטן-גב וחופים</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="זוגית ורומנטית"><span data-translate="style_romantic">זוגית ורומנטית</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="סיטי ברייק אורבני"><span data-translate="style_city">סיטי ברייק אורבני</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="יעדים אקזוטיים"><span data-translate="style_exotic">יעדים אקזוטיים</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="שופינג וקניות"><span data-translate="style_shopping">שופינג וקניות</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="נופש כשר"><span data-translate="style_kosher">נופש כשר</span><i class="fa-solid fa-circle-check"></i></button>
+                </div>
+                <div class="funnel-nav-row">
+                  <button type="button" class="btn btn-secondary funnel-prev"><i class="fa-solid fa-arrow-right"></i> <span data-translate="funnel_back">חזרה</span></button>
+                  <button type="button" class="btn btn-primary funnel-next"><span data-translate="funnel_continue">ממשיכים</span> <i class="fa-solid fa-arrow-left"></i></button>
+                </div>
+              </div>
+
+              <!-- Step 6: Meals -->
+              <div class="funnel-step" data-step="6">
+                <div class="funnel-btn-grid cols-2">
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="ללא ארוחות"><span data-translate="meals_none">ללא ארוחות</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="ארוחת בוקר"><span data-translate="meals_bb">לינה וארוחת בוקר</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="ארוחת בוקר וערב"><span data-translate="meals_hb">חצי פנסיון (בוקר+ערב)</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="הכל כלול"><span data-translate="meals_all">הכל כלול</span><i class="fa-solid fa-circle-check"></i></button>
+                </div>
+                <div class="funnel-nav-row">
+                  <button type="button" class="btn btn-secondary funnel-prev"><i class="fa-solid fa-arrow-right"></i> <span data-translate="funnel_back">חזרה</span></button>
+                  <button type="button" class="btn btn-primary funnel-next"><span data-translate="funnel_continue">ממשיכים</span> <i class="fa-solid fa-arrow-left"></i></button>
+                </div>
+              </div>
+
+              <!-- Step 7: Star Rating -->
+              <div class="funnel-step" data-step="7">
+                <div class="funnel-btn-grid cols-3 star-grid">
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="3 כוכבים"><i class="fa-solid fa-star"></i> <span>3★</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="4 כוכבים"><i class="fa-solid fa-star"></i> <span>4★</span><i class="fa-solid fa-circle-check"></i></button>
+                  <button type="button" class="funnel-btn multi-select magnetic-button" data-val="5 כוכבים"><i class="fa-solid fa-star"></i> <span>5★</span><i class="fa-solid fa-circle-check"></i></button>
+                </div>
+                <div class="funnel-nav-row">
+                  <button type="button" class="btn btn-secondary funnel-prev"><i class="fa-solid fa-arrow-right"></i> <span data-translate="funnel_back">חזרה</span></button>
+                  <button type="button" class="btn btn-primary funnel-next"><span data-translate="funnel_continue">ממשיכים</span> <i class="fa-solid fa-arrow-left"></i></button>
+                </div>
+              </div>
+
+              <!-- Step 8: Contact & Lead Submission -->
+              <div class="funnel-step" data-step="8">
+                <form id="funnel-contact-form">
+                  <div class="funnel-input-group">
+                    <label for="funnel-name" data-translate="label_name">השם שלך</label>
+                    <input type="text" id="funnel-name" class="input-style" placeholder="אלכס כרטר" required>
+                  </div>
+                  <div class="funnel-input-group">
+                    <label for="funnel-phone" data-translate="label_phone">טלפון ליצירת קשר</label>
+                    <input type="tel" id="funnel-phone" class="input-style" placeholder="052-1234567" required>
+                  </div>
+                  <div class="funnel-input-group">
+                    <label for="funnel-email" data-translate="label_email">כתובת אימייל</label>
+                    <input type="email" id="funnel-email" class="input-style" placeholder="alex@travel.co.il" required>
+                  </div>
+                  <div class="funnel-input-group">
+                    <label for="funnel-budget" data-translate="label_budget">תקציב מוערך לאדם (₪)</label>
+                    <input type="text" id="funnel-budget" class="input-style" placeholder="למשל: 3,000 ₪" required>
+                  </div>
+                  <div class="funnel-nav-row">
+                    <button type="button" class="btn btn-secondary funnel-prev"><i class="fa-solid fa-arrow-right"></i> <span data-translate="funnel_back">חזרה</span></button>
+                    <button type="submit" class="btn btn-primary funnel-submit" id="funnel-submit-btn"><span data-translate="btn_submit_inquiry">שלח בקשת הזמנה</span> <i class="fa-solid fa-paper-plane"></i></button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TESTIMONIALS CAROUSEL
+       ========================================== -->
+  <section class="section-padding testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge" data-translate="reviews_badge"><i class="fa-solid fa-star"></i> Happy Travelers</span>
+        <h2 data-translate="reviews_title">Verified Client Experiences</h2>
+        <p data-translate="reviews_desc">Read honest feedback from couples and families who enjoyed Europe directly with BDTours vacation planning.</p>
+      </div>
+      
+      <div class="testimonial-slider-wrapper">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card active" data-index="0">
+          <div class="client-avatar">
+            <img id="avatar-emma" src="" alt="Verified client portrait Emma">
+          </div>
+          <div class="stars-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote" data-translate="quote_1">"The caldera balcony suite in Santorini was magical. Booking directly via BDTours cut out unnecessary online agency markups, and the private local wine tour inclusion was exceptional. Best vacation ever."</p>
+          <h4 class="client-name">Emma &amp; Leo</h4>
+          <span class="client-role" data-translate="role_1">Romantic getaway lovers, UK</span>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card" data-index="1">
+          <div class="client-avatar">
+            <img id="avatar-marcus" src="" alt="Verified client portrait Marcus">
+          </div>
+          <div class="stars-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote" data-translate="quote_2">"Our family had an outstanding time at the Transylvanian pine chalet. The kids loved hiking Bran Castle paths, and the home-cooked dining pack was fantastic. Highly recommended direct rates!"</p>
+          <h4 class="client-name">Marcus Vance</h4>
+          <span class="client-role" data-translate="role_2">Family travel organizers, Canada</span>
+        </div>
+        
+        <!-- Testimonial Dots -->
+        <div class="slider-dots">
+          <button class="dot active" data-slide="0"></button>
+          <button class="dot" data-slide="1"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SUSTAINABLE TRAVEL BLOG & TIPS (EVERGREEN SEO)
+       ========================================== -->
+  <section class="section-padding" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge" data-translate="blog_badge"><i class="fa-solid fa-earth-europe"></i> Explorer Insights</span>
+        <h2 data-translate="blog_title">The BDTours Travel Blog</h2>
+        <p data-translate="blog_desc">Pro guides and packing checklists curated to help you plan the absolute best European romantic breaks and family getaways.</p>
+      </div>
+      
+      <div class="blog-grid">
+        <!-- Article 1 -->
+        <article class="blog-card">
+          <div class="blog-img">
+            <img id="blog-img-0" src="" alt="Santorini blue dome roofs over deep Aegean sea">
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-date" data-translate="blog_date_0">May 23, 2026 • 5 Min Read</span>
+            <h3 data-translate="blog_title_0">The Ultimate Packing List for a Greek Islands Getaway</h3>
+            <p data-translate="blog_desc_0">From sun-protective resort clothing to essential walking accessories, master the perfect light-luggage checklist for your romantic Santorini caldera vacation.</p>
+            <button class="blog-read-more" data-article="0" data-translate="blog_btn_read">Read Article <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="blog-card">
+          <div class="blog-img">
+            <img id="blog-img-1" src="" alt="Wood cabin surrounded by tall green pine forest trees">
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-date" data-translate="blog_date_1">May 18, 2026 • 7 Min Read</span>
+            <h3 data-translate="blog_title_1">Top 5 Hidden Mountain Gems in Romania for Families</h3>
+            <p data-translate="blog_desc_1">Escape crowded tourist trails. Discover pristine forest chalets, spectacular wildlife trails, and traditional Romanian hospitality in Apuseni and Carpathians.</p>
+            <button class="blog-read-more" data-article="1" data-translate="blog_btn_read">Read Article <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="blog-card">
+          <div class="blog-img">
+            <img id="blog-img-2" src="" alt="Colosseum in Rome at golden hour">
+          </div>
+          <div class="blog-card-content">
+            <span class="blog-date" data-translate="blog_date_2">May 15, 2026 • 6 Min Read</span>
+            <h3 data-translate="blog_title_2">How to Maximize a 3-Day City Break in Rome &amp; Venice</h3>
+            <p data-translate="blog_desc_2">Avoid massive crowds, book the best direct terrace restaurants, and plan a seamless couple's itinerary connecting Italy's two most romantic historic cities.</p>
+            <button class="blog-read-more" data-article="2" data-translate="blog_btn_read">Read Article <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       BLOG EXPANDED MODAL POPUPS (ACCORDIONS DRAWERS)
+       ========================================== -->
+  <!-- Modal 1 -->
+  <div class="blog-modal" id="modal-article-0">
+    <div class="blog-modal-content">
+      <button class="modal-close-btn" data-close="0"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-hero-img">
+        <img id="modal-img-0" src="" alt="Greek islands">
+      </div>
+      <div class="modal-body">
+        <span class="modal-meta" data-translate="modal_meta_0">Greek Islands • May 23, 2026</span>
+        <h2 data-translate="blog_title_0">The Ultimate Packing List for a Greek Islands Getaway</h2>
+        <div class="modal-text" data-translate="modal_body_0">
+          <p>Packing for Santorini or the Cyclades is all about balancing elegant resort wear with comfortable, durable essentials. The unique stone pathways of cliffside caldera towns require smart footwear choices.</p>
+          <blockquote>"The light of the Greek islands is intense and beautiful; pack clothing that reflects rather than absorbs."</blockquote>
+          <p>Here are BDTours' top expert packing tips for couples and families heading to Greece:</p>
+          <p><strong>1. Ditch the Stilettos:</strong> Santorini's paths are volcanic rock and highly polished marble. Bring comfortable flat sandals or lightweight canvas shoes with high-traction soles.</p>
+          <p><strong>2. Breathable Fabrics:</strong> Pack linen, organic cotton, and light silk. These look effortlessly premium and keep you cool under the bright Mediterranean sun.</p>
+          <p><strong>3. Windbreakers for Twilight:</strong> Greek islands are famous for the <em>Meltemi</em> summer winds. A lightweight chic scarf or windbreaker is essential for romantic sunset dinner cruises.</p>
+          <p><strong>4. Reef-Safe Sunscreen:</strong> Protect the crystal turquoise waters of volcanic Aegean beaches by only packing biodegradable, mineral-based sun blocks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="blog-modal" id="modal-article-1">
+    <div class="blog-modal-content">
+      <button class="modal-close-btn" data-close="1"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-hero-img">
+        <img id="modal-img-1" src="" alt="Romania nature">
+      </div>
+      <div class="modal-body">
+        <span class="modal-meta" data-translate="modal_meta_1">Mountain Travel • May 18, 2026</span>
+        <h2 data-translate="blog_title_1">Top 5 Hidden Mountain Gems in Romania for Families</h2>
+        <div class="modal-text" data-translate="modal_body_1">
+          <p>Romania's Carpathian mountains are one of Europe's last true wildernesses. For families seeking rich organic hospitality, clean forest air, and direct encounters with history, this is an unmatched vacation zone.</p>
+          <blockquote>"Carpathia offers an organic journey back in time, paired with standard-setting modern luxury cabins."</blockquote>
+          <p>Before packing up for your Romanian family getaway, discover these hidden gems:</p>
+          <p><strong>1. The Apuseni Forest Trail:</strong> Easy forest walks with spectacular cave paths perfect for all family ages. Guided by local rangers, kids learn wildlife identification safely.</p>
+          <p><strong>2. Bran &amp; Rasnov Castles:</strong> Skip the generic tourist buses. BDTours coordinates private direct drivers to explore medieval fortresses early in the morning before crowds arrive.</p>
+          <p><strong>3. Organic Dining Hosts:</strong> Take advantage of our *Premium Dining Pack* option to enjoy traditional Romanian home-cooking prepared by local chefs using organic garden vegetables.</p>
+          <p><strong>4. Local Wildlife Walks:</strong> Romania hosts the largest brown bear populations in Europe. Book direct to experience safe, high-end wildlife observation cabins guided by certified rangers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="blog-modal" id="modal-article-2">
+    <div class="blog-modal-content">
+      <button class="modal-close-btn" data-close="2"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-hero-img">
+        <img id="modal-img-2" src="" alt="Italy city breaks">
+      </div>
+      <div class="modal-body">
+        <span class="modal-meta" data-translate="modal_meta_2">Italy Breaks • May 15, 2026</span>
+        <h2 data-translate="blog_title_2">How to Maximize a 3-Day City Break in Rome &amp; Venice</h2>
+        <div class="modal-text" data-translate="modal_body_2">
+          <p>Rome and Venice represent the pinnacle of romantic city breaks. When you only have three days, planning is critical to avoid spending hours in tourist queues.</p>
+          <blockquote>"A city break should feel like a luxurious exploration, not a stressful checklist."</blockquote>
+          <p>How BDTours guarantees a smooth, high-quality Italian city break:</p>
+          <p><strong>1. Fast-Track Museum Access:</strong> Direct booking with us pre-secures fast-track entry to the Vatican Museums and Roman Colosseum, saving you up to 3 hours of queuing daily.</p>
+          <p><strong>2. Stay Centrally:</strong> Skip cheap, far-away suburban motels. BDTours only selects premium boutique hotels located within walking distance of Venice's canals and Rome's piazzas.</p>
+          <p><strong>3. Venice Gondolas Direct:</strong> Don't pay exorbitant cash rates to street gondoliers. We book a verified, private canal gondola tour directly at official fair prices.</p>
+          <p><strong>4. VIP Transfers:</strong> Add our *VIP Private Transfer* option to enjoy direct luxury transport from Rome Fiumicino or Venice Marco Polo airports straight to your hotel door.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FOOTER (TRUST CERTIFICATES)
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#home" class="logo">
+            <img src="assets/images/eco_logo.svg" alt="BDTours Logo">
+            <span>BDTours</span>
+          </a>
+          <p data-translate="footer_desc">Premium couples retreats, high-quality family vacations, and curated European city breaks. Built on direct partner relationships, transparent fair rates, and outstanding local support.</p>
+          <div class="footer-socials">
+            <a href="https://facebook.com/bdtours" class="social-icon" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/bdtours" class="social-icon" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/bdtours" class="social-icon" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtube.com/bdtours" class="social-icon" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4 data-translate="footer_col_explore">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#home" data-translate="footer_home">Home Banner</a></li>
+            <li><a href="#destinations" data-translate="footer_vacations">Vacation Packages</a></li>
+            <li><a href="#booking" data-translate="footer_booking">Dynamic Inquiry Form</a></li>
+            <li><a href="#blog" data-translate="footer_blog">Travel Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-translate="footer_col_partners">Our Trust Partners</h4>
+          <ul class="footer-links">
+            <li><a href="#booking" data-translate="partner_dir">Partner Directory</a></li>
+            <li><a href="https://booking.com" target="_blank" rel="noopener">Booking Partner Portal</a></li>
+            <li><a href="https://momondo.ro" target="_blank" rel="noopener">Momondo Romania</a></li>
+            <li><a href="https://croaziere.co" target="_blank" rel="noopener">Croaziere.co Cruise</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col footer-newsletter">
+          <h4 data-translate="footer_col_newsletter">VIP Explorer Club</h4>
+          <p data-translate="newsletter_desc">Subscribe for 10% off your first BDTours European retreat and get our free Wilderness Packing Guide instantly!</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" class="input-style" placeholder="email@travel.com" required>
+            <button type="submit" class="btn btn-primary" style="padding: 12px 18px;"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="eco-badges-row">
+            <div class="eco-badge">
+              <i class="fa-solid fa-award"></i> <span data-translate="badge_direct">Direct Rates</span>
+            </div>
+            <div class="eco-badge">
+              <i class="fa-solid fa-shield-halved"></i> <span data-translate="badge_secure">100% Secure</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright" data-translate="footer_copyright">&copy; 2026 Best Deal Tours® | BDTours. All Rights Reserved. All bookings made directly protect standard-setting quality travel integrity.</p>
+        <div class="footer-policies">
+          <a href="#home" data-translate="terms">Terms of Use</a>
+          <a href="#home" data-translate="cookies">Cookies Policy</a>
+          <a href="#home" data-translate="privacy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Widget -->
+  <a href="https://wa.me/972523279179" class="floating-whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-text" data-translate="whatsapp_floating_text">Chat with Agent</span>
+  </a>
+
+  <!-- Glowing Cursor Follower -->
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
