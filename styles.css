@@ -463,6 +463,12 @@ img, svg {
   gap: 16px;
 }
 
+#inquire-nav-btn {
+  padding: 14px 44px; /* Resized to be wider and more prominent as the single key CTA */
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
 /* Bilingual Language Switcher Layout */
 .lang-selector {
   display: flex;
