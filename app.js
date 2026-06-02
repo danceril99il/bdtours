@@ -18,7 +18,9 @@ window.BDToursConfig = {
     budapest: "assets/images/budapest.jpg",     // Fisherman's Bastion sunset (User Uploaded) [NEW]
     bulgaria: "assets/images/bulgaria.jpg",     // Varna Family Resort (User Uploaded Resort Aerial Photo) [NEW]
     cyprus: "assets/images/cyprus.jpg",          // Larnaca sandy beach resort (User Uploaded) [NEW]
-    mykonos: "assets/images/mykonos.jpg"         // Mykonos beachfront hotel Erato (User Uploaded) [NEW]
+    mykonos: "assets/images/mykonos.jpg",         // Mykonos beachfront hotel Erato (User Uploaded) [NEW]
+    canopy: "assets/images/canopy_lodge.png",     // Canopy Jungle Treehouse Lodge [NEW]
+    kayak: "assets/images/coastal_kayak.png"       // Coastal Kayak Active Adventure [NEW]
   }
 };
 
@@ -59,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const bulgariaImg = document.getElementById('img-bulgaria');
     const cyprusImg = document.getElementById('img-cyprus');
     const mykonosImg = document.getElementById('img-mykonos');
+    const canopyImg = document.getElementById('img-canopy');
+    const kayakImg = document.getElementById('img-kayak');
     
     // Blog and testimonial avatars mapping
     const avatarEmma = document.getElementById('avatar-emma');
@@ -78,6 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (bulgariaImg) bulgariaImg.src = window.BDToursConfig.images.bulgaria;
     if (cyprusImg) cyprusImg.src = window.BDToursConfig.images.cyprus;
     if (mykonosImg) mykonosImg.src = window.BDToursConfig.images.mykonos;
+    if (canopyImg) canopyImg.src = window.BDToursConfig.images.canopy;
+    if (kayakImg) kayakImg.src = window.BDToursConfig.images.kayak;
     
     // Testimonial & Blog bindings (uses matched, high-quality real photography)
     if (avatarEmma) avatarEmma.src = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80";
@@ -139,7 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
       reviews_count_1: "(112 reviews)",
       tag_romania: "Romania",
       tag_bucharest: "Bucharest Deal",
-      meta_bucharest_time: "4-Night Long Weekend",
+      meta_bucharest_time: "4 Nights",
+      meta_bucharest_guests: "2 Adults",
       meta_bucharest_flights: "Wizz Air Included",
       title_bucharest: "Bucharest 4-Night Relaxing Getaway",
       desc_bucharest: "Relaxing weekend break in central boutique hotels<br>Price includes:<br>• Direct flights with Wizz Air<br>• Hand bag & up to 20kg luggage per passenger<br>• Premium hotel on a Bed & Breakfast basis<br>• 24/7 personal agent support & VIP priority car rental",
@@ -161,7 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
       tag_hungary: "Budapest Deal",
       tag_deal_price: "2520 NIS / Person",
       price_unit_package: "/ package",
-      meta_budapest_time: "4-Night Long Weekend",
+      price_unit_person: "/ person",
+      meta_budapest_time: "4 Nights",
+      meta_budapest_guests: "2 Adults",
       meta_budapest_flights: "Wizz Air Included",
       title_budapest: "Budapest 4-Night Weekend Getaway",
       desc_budapest: "Boutique weekend city break in central Budapest<br>Price includes:<br>• Direct flights with Wizz Air<br>• Hand bag & 10kg trolley bag per passenger<br>• Highly-rated hotel on a Bed & Breakfast basis<br>• 24/7 personal agent support",
@@ -187,7 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
       opt_cyprus: "Cyprus 4-Night Beach & City Break, Larnaca ($565/p)",
       tag_cyprus: "Cyprus Deal",
       tag_deal_price_cyprus: "2100 NIS / Person",
-      meta_cyprus_time: "4-Night Long Weekend",
+      meta_cyprus_time: "4 Nights",
+      meta_cyprus_guests: "2 Adults",
       meta_cyprus_flights: "Aegean/Arkia Included",
       title_cyprus: "Cyprus Larnaca 4-Night Beach & City Break",
       desc_cyprus: "Summer beach & city break in Larnaca select hotels<br>Price includes:<br>• Direct flights with Aegean Airlines / Arkia<br>• Hand bag & 8kg trolley suitcase per passenger<br>• Curated hotel on a Bed & Breakfast basis<br>• 24/7 personal agent support",
@@ -266,8 +276,31 @@ document.addEventListener('DOMContentLoaded', () => {
       terms: "Terms of Use",
       cookies: "Cookies Policy",
       privacy: "Privacy Policy",
+      tag_rome: "Rome Deal",
+      meta_rome_time: "3 Nights",
+      meta_rome_guests: "2 Adults",
+      meta_rome_flights: "Ryanair Flights Included",
+      title_rome: "Rome Colosseum Sunset City Break",
+      desc_rome: "Romantic getaway in Italy! 3 nights in central boutique hotel (Hotel Anglo Americano / Trevi). Includes direct Ryanair flights, priority boarding + trolley, private transfers, and personal agent support!",
+      reviews_count_rome: "(84 reviews)",
+      
+      tag_panama: "Panama Eco",
+      meta_canopy_time: "5 Nights",
+      meta_canopy_guests: "2 Adults + 2 Kids",
+      title_canopy: "Canopy Jungle Treehouse Lodge",
+      desc_canopy: "Unforgettable eco family retreat! 5 nights in a spectacular treehouse cabin in Panama. Includes direct flights, private transfers, daily guided jungle tours, and all organic meals included!",
+      reviews_count_canopy: "(36 reviews)",
+      
+      tag_adventure: "Active Adventure",
+      meta_kayak_time: "5 Nights",
+      meta_kayak_guests: "2 Adults",
+      title_kayak: "Coastal Kayak Active Adventure",
+      desc_kayak: "Active couples adventure! 5 nights navigating the crystal clear waters of the Greek Islands. Includes specialized sea kayak gear, certified outdoor guides, boutique seaside lodging, and daily breakfasts!",
+      reviews_count_kayak: "(45 reviews)",
+
       tag_mykonos: "Mykonos Deal",
       meta_mykonos_time: "5 Nights",
+      meta_mykonos_guests: "2 Adults",
       meta_mykonos_flights: "Blue Bird Direct Flights",
       title_mykonos: "Mykonos Erato Hotel 5-Night Couples Escape",
       desc_mykonos: "Midsummer beachfront getaway (Erato Hotel Mykonos)<br>Price includes:<br>• Direct flights with Blue Bird<br>• Hand bag & up to 20kg luggage per passenger<br>• Beachfront hotel on a Bed & Breakfast basis<br>• 24/7 personal agent support",
@@ -360,7 +393,8 @@ document.addEventListener('DOMContentLoaded', () => {
       reviews_count_1: "(112 חוות דעת)",
       tag_romania: "רומניה",
       tag_bucharest: "דיל לבוקרשט",
-      meta_bucharest_time: "4 לילות ו-5 ימים",
+      meta_bucharest_time: "4 לילות",
+      meta_bucharest_guests: "זוג מבוגרים",
       meta_bucharest_flights: "טיסות Wizz Air כלולות",
       title_bucharest: "חופשה זוגית מדהימה בבוקרשט",
       desc_bucharest: "סופ\"ש מפנק במלונות בוטיק במרכז בוקרשט<br>המחיר כולל:<br>• טיסות ישירות עם Wizz Air<br>• תיק יד ומזוודה עד 20 ק\"ג לכל נוסע<br>• מלון ע\"ב לינה וארוחת בוקר<br>• ליווי אישי וצמוד של סוכן 24/7 ועדיפות רכב VIP",
@@ -375,16 +409,16 @@ document.addEventListener('DOMContentLoaded', () => {
       reviews_count_5: "(41 חוות דעת)",
       whatsapp_floating_text: "צ'אט עם נציג",
 
-      // Budapest Card Hebrew translation
       tag_hungary: "דיל לבודפשט",
       tag_deal_price: "2520 ש\"ח לאדם",
       price_unit_package: "/ חבילה",
-      meta_budapest_time: "סופ\"ש ארוך (ה'-ב')",
+      price_unit_person: "/ לאדם",
+      meta_budapest_time: "4 לילות",
+      meta_budapest_guests: "זוג מבוגרים",
       meta_budapest_flights: "טיסות ישירות כלולות",
       title_budapest: "סופ\"ש 4 לילות מדהים בבודפשט!",
       desc_budapest: "סופ\"ש מדהים במלונות בוטיק מרכזיים בבודפשט<br>המחיר כולל:<br>• טיסות ישירות עם Wizz Air<br>• תיק יד ומזוודת טרולי 10 ק\"ג לכל נוסע<br>• מלון ע\"ב לינה וארוחת בוקר<br>• ליווי אישי וצמוד של סוכן 24/7",
 
-      // Budapest Deals Hebrew translation
       deal_badge_budapest: "<i class='fa-solid fa-fire'></i> דיל במחיר פצצה! 2520 ש\"ח לאדם!",
       deal_title_budapest: "יוני 2026 בבודפשט - סופ\"ש מהסרטים!",
       deal_desc_budapest: "חופשה זוגית מדהימה או חופשה עירונית משפחתית! 25-29 ביוני 2026 (ימי חמישי עד שני) במלונות מרכזיים מצוינים, טיסות ישירות עם חברת Wizz Air וליווי צמוד של סוכן!",
@@ -400,17 +434,16 @@ document.addEventListener('DOMContentLoaded', () => {
       deal_hotel_3_budapest: "<i class='fa-solid fa-hotel'></i> <strong>La Prima Fashion Hotel ★★★★</strong> — החל מ-5360 ש\"ח לזוג (2680 ש\"ח לאדם) ללא ארוחות",
       deal_includes_budapest: "<i class='fa-solid fa-plane'></i> כולל: טיסות ישירות עם Wizz Air (הלוך: 10:10 TLV -> BUD / חזור: 05:00 BUD -> TLV), תיק גב + טרולי 10 ק\"ג וליווי אישי של סוכן.",
 
-      // Cyprus Card Hebrew translation
       opt_budapest: "בודפשט 4 לילות סופ\"ש אורבני, הונגריה (2520 ש\"ח)",
       opt_cyprus: "לרנקה קפריסין 4 לילות חוף וסיטי, קפריסין (2100 ש\"ח)",
       tag_cyprus: "דיל לקפריסין",
       tag_deal_price_cyprus: "2100 ש\"ח לאדם",
-      meta_cyprus_time: "סופ\"ש ארוך (ה'-ב')",
+      meta_cyprus_time: "4 לילות",
+      meta_cyprus_guests: "זוג מבוגרים",
       meta_cyprus_flights: "טיסות ישירות כלולות",
       title_cyprus: "קפריסין לרנקה - 4 לילות חוף וסיטי!",
       desc_cyprus: "חופשת חוף וסיטי ברייק במלונות נבחרים בלרנקה<br>המחיר כולל:<br>• טיסות ישירות עם Aegean Airlines / Arkia<br>• תיק יד ומזוודת טרולי 8 ק\"ג לכל נוסע<br>• מלון ע\"ב לינה וארוחת בוקר<br>• ליווי אישי וצמוד של סוכן 24/7",
 
-      // Cyprus Deals Hebrew translation
       deal_badge_cyprus: "<i class='fa-solid fa-fire'></i> דיל מטורף לקפריסין! 2100 ש\"ח לאדם!",
       deal_title_cyprus: "יוני 2026 בלרנקה - חופשת קיץ לוהטת!",
       deal_desc_cyprus: "נופש חלומי של 4 לילות ו-5 ימים מלאים! 18-22 ביוני 2026 (ימי חמישי עד שני) במלונות מצוינים בקרבת חוף הים, טיסות ישירות וליווי צמוד של סוכן 24/7!",
@@ -484,8 +517,31 @@ document.addEventListener('DOMContentLoaded', () => {
       terms: "תנאי שימוש",
       cookies: "מדיניות קוקיז",
       privacy: "מדיניות פרטיות",
+      tag_rome: "דיל רומא",
+      meta_rome_time: "3 לילות",
+      meta_rome_guests: "זוג מבוגרים",
+      meta_rome_flights: "טיסות ריינאייר כלולות",
+      title_rome: "סופ\"ש רומנטי ברומא - קוליסאום ושקיעה",
+      desc_rome: "חופשה רומנטית מדהימה ברומא! 3 לילות במלונות בוטיק נבחרים במרכז העיר (Anglo Americano / Trevi). כולל טיסות ישירות עם Ryanair, טרולי והעברות פרטיות וליווי של סוכן אישי 24/7!",
+      reviews_count_rome: "(84 חוות דעת)",
+      
+      tag_panama: "פנמה אקולוגי",
+      meta_canopy_time: "5 לילות",
+      meta_canopy_guests: "2 מבוגרים + 2 ילדים",
+      title_canopy: "מלון בקתת עץ בצמרות הג'ונגל - פנמה",
+      desc_canopy: "חופשה אקולוגית משפחתית בלתי נשכחת! 5 לילות בבקתת עץ מפוארת בצמרות הג'ונגל של פנמה. כולל טיסות, העברות, סיורי שטח מודרכים יומיים וכל הארוחות ע\"ב רכיבים אורגניים!",
+      reviews_count_canopy: "(36 חוות דעת)",
+      
+      tag_adventure: "הרפתקה אקטיבית",
+      meta_kayak_time: "5 לילות",
+      meta_kayak_guests: "זוג מבוגרים",
+      title_kayak: "הרפתקת קיאקים ושיוט באיי יוון",
+      desc_kayak: "הרפתקת ספורט מים זוגית! 5 לילות של שיוט וחתירה בקיאקים סביב האיים הקסומים של יוון. כולל ציוד קיאקים מקצועי, ליווי של מדריכי שטח מוסמכים, מלונות בוטיק ולינה וארוחת בוקר!",
+      reviews_count_kayak: "(45 חוות דעת)",
+
       tag_mykonos: "דיל למיקונוס",
       meta_mykonos_time: "5 לילות",
+      meta_mykonos_guests: "זוג מבוגרים",
       meta_mykonos_flights: "טיסות Blue Bird ישירות",
       title_mykonos: "חלום ליל קיץ במיקונוס - 5 לילות זוגי!",
       desc_mykonos: "חלום ליל קיץ במיקונוס (Erato Hotel Mykonos)<br>המחיר כולל:<br>• טיסות ישירות עם Blue Bird<br>• תיק יד ומזוודה עד 20 ק\"ג לכל נוסע<br>• מלון ע\"ב לינה וארוחת בוקר (קרוב לים)<br>• ליווי אישי וצמוד של סוכן 24/7",
@@ -601,6 +657,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCardPrice('card-price-bulgaria', 14160);
     updateCardPrice('card-price-cyprus', 2100);
     updateCardPrice('card-price-mykonos', 3840);
+    updateCardPrice('card-price-rome', 2275);
+    updateCardPrice('card-price-canopy', 12740);
+    updateCardPrice('card-price-kayak', 4400);
 
     // Sync assistant text
     if (typeof updateAssistantText === 'function') {
@@ -689,41 +748,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 5. CATEGORY TABS FILTERING & ROW HEADERS HIDING
   // ==========================================
-  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabButtons = document.querySelectorAll('.filter-tabs button.tab-btn');
   const destCards = document.querySelectorAll('.dest-card');
   
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       // Toggle active tab button
-      tabButtons.forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       
       const filter = btn.getAttribute('data-filter');
+      const grid = document.querySelector('.destination-grid');
+      
+      if (grid) grid.classList.remove('compact-view');
       
       destCards.forEach(card => {
         const categories = card.getAttribute('data-category').split(' ');
-        if (filter === 'all' || categories.includes(filter)) {
-          card.style.display = 'block';
+        if (categories.includes(filter)) {
+          card.classList.remove('hidden');
         } else {
-          card.style.display = 'none';
-        }
-      });
-      
-      // Hide empty row containers dynamically after filtering
-      const rowContainers = document.querySelectorAll('.dest-row-container');
-      rowContainers.forEach(container => {
-        const visibleCards = container.querySelectorAll('.dest-card:not([style*="display: none"])');
-        if (visibleCards.length === 0) {
-          container.style.display = 'none';
-        } else {
-          container.style.display = 'block';
+          card.classList.add('hidden');
         }
       });
     });
   });
 
   // ==========================================
-  // 6. VACATION CARD CLICK HANDLER (Direct WhatsApp Payload)
+  // 6. VACATION CARD CLICK HANDLER (Direct WhatsApp Payload & Redirection)
   // ==========================================
   const selectRetreatButtons = document.querySelectorAll('.select-retreat-btn');
   selectRetreatButtons.forEach(btn => {
@@ -738,7 +789,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       if (retreatCode === 'santorini') {
         retreatName = isHebrew ? "חבילת משפחה לרודוס יוון (6 לילות, 2 מבוגרים + 2 ילדים)" : "Rhodes Family Package, Greece (6 Nights, 2 Adults + 2 Kids)";
-        price = isHebrew ? "15,350 ₪" : "$5,058";
+        price = isHebrew ? "15,350 ₪" : "$5,060";
       } else if (retreatCode === 'bulgaria') {
         retreatName = isHebrew ? "חבילת משפחה לוארנה בולגריה (6 לילות, הכל כלול, 2 מבוגרים + 2 ילדים)" : "Varna Family Package, Bulgaria (6 Nights, All-Inclusive, 2+2)";
         price = isHebrew ? "14,160 ₪" : "$4,668";
@@ -754,6 +805,15 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (retreatCode === 'mykonos') {
         retreatName = isHebrew ? "חלום ליל קיץ במיקונוס יוון (5 לילות, מלון על החוף)" : "Mykonos Beachfront Couples Escape, Greece (5 Nights)";
         price = isHebrew ? "3,840 ₪ לאדם / 7,680 ₪ לזוג" : "$1,266 / person";
+      } else if (retreatCode === 'rome') {
+        retreatName = isHebrew ? "חבילת סופ\"ש רומנטי ברומא איטליה (3 לילות)" : "Rome Couples Weekend Break, Italy (3 Nights)";
+        price = isHebrew ? "2,275 ₪ לאדם" : "$750 / person";
+      } else if (retreatCode === 'canopy') {
+        retreatName = isHebrew ? "חבילת נופש אקולוגי בבית על העץ בפנמה (5 לילות)" : "Canopy Jungle Treehouse Lodge, Panama (5 Nights)";
+        price = isHebrew ? "12,740 ₪" : "$4,200";
+      } else if (retreatCode === 'kayak') {
+        retreatName = isHebrew ? "חבילת הרפתקאות שיוט וקיאקים באיי יוון (5 לילות)" : "Coastal Kayak Active Adventure, Greece (5 Nights)";
+        price = isHebrew ? "4,400 ₪ לאדם" : "$1,450 / person";
       }
       
       let msg = "";
@@ -776,11 +836,12 @@ Please contact me to finalize flights and accommodation details!`;
       
       // Also pre-select the destination in the step-3 funnel!
       let destVal = "";
-      if (retreatCode === 'santorini' || retreatCode === 'mykonos') destVal = "יוון והאיים";
+      if (retreatCode === 'santorini' || retreatCode === 'mykonos' || retreatCode === 'kayak') destVal = "יוון והאיים";
       else if (retreatCode === 'cyprus') destVal = "קפריסין";
       else if (retreatCode === 'budapest') destVal = "הונגריה (בודפשט)";
       else if (retreatCode === 'bucharest') destVal = "רומניה (בוקרשט)";
       else if (retreatCode === 'bulgaria') destVal = "בולגריה (וארנה)";
+      else if (retreatCode === 'rome' || retreatCode === 'canopy') destVal = "אירופה";
 
       if (destVal) {
         choices.destinations.clear();
@@ -801,6 +862,75 @@ Please contact me to finalize flights and accommodation details!`;
       }
     });
   });
+
+  // Cross-page routing via URL query parameters and compact-view click redirection
+  const isAllVacationsPage = window.location.pathname.includes('all-vacations.html');
+  const destCardsElements = document.querySelectorAll('.dest-card');
+  const urlParams = new URLSearchParams(window.location.search);
+  const filterParam = urlParams.get('filter');
+  const retreatParam = urlParams.get('retreat');
+
+  if (isAllVacationsPage) {
+    // Force compact-view class on grid
+    const grid = document.querySelector('.destination-grid');
+    if (grid) {
+      grid.classList.add('compact-view');
+    }
+    
+    // Clicking any card on all-vacations page redirects to index.html with query parameters
+    destCardsElements.forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A' || e.target.closest('a')) return;
+        
+        const retreat = card.getAttribute('data-retreat');
+        const categories = card.getAttribute('data-category').split(' ');
+        
+        let targetFilter = 'family';
+        if (categories.includes('family')) targetFilter = 'family';
+        else if (categories.includes('city')) targetFilter = 'city';
+        else if (categories.includes('beach')) targetFilter = 'beach';
+        
+        window.location.href = `index.html?filter=${targetFilter}&retreat=${retreat}`;
+      });
+    });
+  } else {
+    // Router logic for index.html
+    const grid = document.querySelector('.destination-grid');
+    if (grid) {
+      grid.classList.remove('compact-view');
+    }
+
+    let activeFilter = filterParam || 'family';
+    
+    // Programmatically select tab and hide other category cards
+    const targetTab = document.querySelector(`.filter-tabs button[data-filter="${activeFilter}"]`);
+    if (targetTab) {
+      document.querySelectorAll('.filter-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+      targetTab.classList.add('active');
+    }
+    
+    destCards.forEach(card => {
+      const categories = card.getAttribute('data-category').split(' ');
+      if (categories.includes(activeFilter)) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    if (retreatParam) {
+      const targetCard = document.querySelector(`.dest-card[data-retreat="${retreatParam}"]`);
+      if (targetCard) {
+        setTimeout(() => {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetCard.classList.add('highlight-glow');
+          setTimeout(() => {
+            targetCard.classList.remove('highlight-glow');
+          }, 2000);
+        }, 300);
+      }
+    }
+  }
 
   // Claim Deal (Countdown Urgency clicks)
   const claimBudapestBtn = document.getElementById('claim-budapest-btn');

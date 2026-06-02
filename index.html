@@ -125,212 +125,294 @@
       
       <!-- Filter Tabs -->
       <div class="filter-tabs">
-        <button class="tab-btn active" data-filter="all" data-translate="tab_all">All Vacations</button>
-        <button class="tab-btn" data-filter="family" data-translate="tab_family">Family Vacations</button>
+        <a href="all-vacations.html" class="tab-btn" data-translate="tab_all">All Vacations</a>
+        <button class="tab-btn active" data-filter="family" data-translate="tab_family">Family Vacations</button>
         <button class="tab-btn" data-filter="city" data-translate="tab_city">City Breaks</button>
         <button class="tab-btn" data-filter="beach" data-translate="tab_beach">Beach &amp; Islands</button>
       </div>
       
-      <!-- Row 1: Family Longer Holidays -->
-      <div class="dest-row-container">
-        <h3 class="dest-row-title" data-translate="dest_row_family_title">Family longer holiday for 2 adults and up to 2 children</h3>
-        <div class="destination-grid">
-          
-          <!-- Card 1: Rhodes All-Inclusive Family Palace (Greece) [NEW] -->
-          <article class="dest-card" data-category="beach family">
-            <div class="dest-img-container">
-              <img id="img-santorini" src="" alt="Rodos Palace Hotel in Rhodes, Greece with gardens and pools">
-              <div class="dest-badges">
-                <span class="dest-tag accent-teal" data-translate="tag_greece">Greece Family</span>
-                <span class="dest-tag accent-orange" data-translate="tag_family_deal">All Inclusive</span>
-              </div>
-              <div class="dest-price-badge">
-                <span class="dest-price-val" id="card-price-santorini">$5058</span>
-                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
-              </div>
+      <!-- Unified Destination Grid (Exactly 9 cards - dynamically compact/detailed) -->
+      <div class="destination-grid">
+        
+        <!-- Card 1: Rhodes All-Inclusive Family Palace (Greece) [retreat Santorini] -->
+        <article class="dest-card" data-category="beach family" data-retreat="santorini">
+          <div class="dest-img-container">
+            <img id="img-santorini" src="" alt="Rodos Palace Hotel in Rhodes, Greece with gardens and pools">
+            <div class="dest-badges">
+              <span class="dest-tag accent-teal" data-translate="tag_greece">Greece Family</span>
+              <span class="dest-tag accent-orange" data-translate="tag_family_deal">All Inclusive</span>
             </div>
-            <div class="dest-info">
-              <div class="dest-meta">
-                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_rhodes_time">6 Nights</span></span>
-                <span><i class="fa-solid fa-users"></i> <span data-translate="meta_rhodes_guests">2 Adults + 2 Kids</span></span>
-              </div>
-              <h3 data-translate="title_rhodes">Rhodes All-Inclusive Family Resort</h3>
-              <p data-translate="desc_rhodes">Unforgettable family retreat! 6 nights in a 5-star premium resort (Rodos Palace / Lindos Royal). Includes direct Aegean Airlines flights, 20kg luggage + 7kg trolley, private transfers, and personal agent support!</p>
-              <div class="dest-actions">
-                <div class="dest-rating">
-                  <i class="fa-solid fa-star"></i>
-                  <span class="dest-rating-val">4.96</span>
-                  <span class="dest-rating-count" data-translate="reviews_count_1">(112 reviews)</span>
-                </div>
-                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="santorini" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+            <div class="dest-price-badge">
+              <span class="dest-price-val" id="card-price-santorini">$5060</span>
+              <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
             </div>
-          </article>
+          </div>
+          <div class="dest-info">
+            <div class="dest-meta">
+              <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_rhodes_time">6 Nights</span></span>
+              <span><i class="fa-solid fa-users"></i> <span data-translate="meta_rhodes_guests">2 Adults + 2 Kids</span></span>
+            </div>
+            <h3 data-translate="title_rhodes">Rhodes All-Inclusive Family Resort</h3>
+            <p data-translate="desc_rhodes">Unforgettable family retreat! 6 nights in a 5-star premium resort (Rodos Palace / Lindos Royal). Includes direct Aegean Airlines flights, 20kg luggage + 7kg trolley, private transfers, and personal agent support!</p>
+            <div class="dest-actions">
+              <div class="dest-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="dest-rating-val">4.96</span>
+                <span class="dest-rating-count" data-translate="reviews_count_1">(112 reviews)</span>
+              </div>
+              <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="santorini" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
 
-          <!-- Card 2: Bulgaria Golden Sands Resort (Bulgaria) -->
-          <article class="dest-card" data-category="beach family">
-            <div class="dest-img-container">
-              <img id="img-bulgaria" src="" alt="Beautiful sunlit European seaside bay and resort pools">
-              <div class="dest-badges">
-                <span class="dest-tag accent-teal" data-translate="tag_bulgaria">Bulgaria Beach</span>
-                <span class="dest-tag accent-orange" data-translate="tag_family_choice">Family Choice</span>
-              </div>
-              <div class="dest-price-badge">
-                <span class="dest-price-val" id="card-price-bulgaria">$4668</span>
-                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
-              </div>
+        <!-- Card 2: Bulgaria Golden Sands Resort (Bulgaria) [retreat Bulgaria] -->
+        <article class="dest-card" data-category="beach family" data-retreat="bulgaria">
+          <div class="dest-img-container">
+            <img id="img-bulgaria" src="" alt="Beautiful sunlit European seaside bay and resort pools">
+            <div class="dest-badges">
+              <span class="dest-tag accent-teal" data-translate="tag_bulgaria">Bulgaria Beach</span>
+              <span class="dest-tag accent-orange" data-translate="tag_family_choice">Family Choice</span>
             </div>
-            <div class="dest-info">
-              <div class="dest-meta">
-                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_bulgaria_time">6 Nights</span></span>
-                <span><i class="fa-solid fa-umbrella-beach"></i> <span data-translate="meta_bulgaria_guests">2 Adults + 2 Kids</span></span>
-              </div>
-              <h3 data-translate="title_bulgaria">Varna All-Inclusive Family Resort</h3>
-              <p data-translate="desc_bulgaria">High-quality family beach holiday in Varna, Bulgaria! 6 nights in a 4 or 5-star premium resort (Prestige Deluxe Aquapark / International Casino). Includes direct Israir flights, 20kg luggage + 8kg trolley, private transfers, and personal agent support.</p>
-              <div class="dest-actions">
-                <div class="dest-rating">
-                  <i class="fa-solid fa-star"></i>
-                  <span class="dest-rating-val">4.88</span>
-                  <span class="dest-rating-count" data-translate="reviews_count_4">(104 reviews)</span>
-                </div>
-                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="bulgaria" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+            <div class="dest-price-badge">
+              <span class="dest-price-val" id="card-price-bulgaria">$4668</span>
+              <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
             </div>
-          </article>
+          </div>
+          <div class="dest-info">
+            <div class="dest-meta">
+              <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_bulgaria_time">6 Nights</span></span>
+              <span><i class="fa-solid fa-users"></i> <span data-translate="meta_bulgaria_guests">2 Adults + 2 Kids</span></span>
+            </div>
+            <h3 data-translate="title_bulgaria">Varna All-Inclusive Family Resort</h3>
+            <p data-translate="desc_bulgaria">High-quality family beach holiday in Varna, Bulgaria! 6 nights in a 4 or 5-star premium resort (Prestige Deluxe Aquapark / International Casino). Includes direct Israir flights, 20kg luggage + 8kg trolley, private transfers, and personal agent support.</p>
+            <div class="dest-actions">
+              <div class="dest-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="dest-rating-val">4.88</span>
+                <span class="dest-rating-count" data-translate="reviews_count_4">(104 reviews)</span>
+              </div>
+              <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="bulgaria" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
 
-        </div>
-      </div>
-      
-      <!-- Row 2: Couples Short City Break Escapes -->
-      <div class="dest-row-container" style="margin-top: 60px;">
-        <h3 class="dest-row-title" data-translate="dest_row_couples_title">Couples short city break escape</h3>
-        <div class="destination-grid">
-          
-          <!-- Card 3: Budapest Weekend City Break (Hungary) [NEW] -->
-          <article class="dest-card" data-category="city">
-            <div class="dest-img-container">
-              <img id="img-budapest" src="" alt="Beautiful Parliament building in Budapest, Hungary at sunset next to Danube river">
-              <div class="dest-badges">
-                <span class="dest-tag accent-teal" data-translate="tag_hungary">Budapest Deal</span>
-                <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
-              </div>
-              <div class="dest-price-badge">
-                <span class="dest-price-val" id="card-price-budapest">$680</span>
-                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
-              </div>
+        <!-- Card 3: Budapest Weekend City Break (Hungary) [retreat Budapest] -->
+        <article class="dest-card" data-category="city" data-retreat="budapest">
+          <div class="dest-img-container">
+            <img id="img-budapest" src="" alt="Beautiful Parliament building in Budapest, Hungary at sunset next to Danube river">
+            <div class="dest-badges">
+              <span class="dest-tag accent-teal" data-translate="tag_hungary">Budapest Deal</span>
+              <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
             </div>
-            <div class="dest-info">
-              <div class="dest-meta">
-                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_budapest_time">4-Night Long Weekend</span></span>
-                <span><i class="fa-solid fa-plane"></i> <span data-translate="meta_budapest_flights">Wizz Air Included</span></span>
-              </div>
-              <h3 data-translate="title_budapest">Budapest 4-Night Weekend Getaway</h3>
-              <p data-translate="desc_budapest">A bomb price deal! 4 nights in central boutique hotels, direct flights, personal agent coordination, and hand/trolley bags included. Unmatched city break deal.</p>
-              <div class="dest-actions">
-                <div class="dest-rating">
-                  <i class="fa-solid fa-star"></i>
-                  <span class="dest-rating-val">4.98</span>
-                  <span class="dest-rating-count" data-translate="reviews_count_5">(41 reviews)</span>
-                </div>
-                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="budapest" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+            <div class="dest-price-badge">
+              <span class="dest-price-val" id="card-price-budapest">$831</span>
+              <span class="dest-price-unit" data-translate="price_unit_person">/ person</span>
             </div>
-          </article>
+          </div>
+          <div class="dest-info">
+            <div class="dest-meta">
+              <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_budapest_time">4 Nights</span></span>
+              <span><i class="fa-solid fa-users"></i> <span data-translate="meta_budapest_guests">2 Adults</span></span>
+            </div>
+            <h3 data-translate="title_budapest">Budapest 4-Night Weekend Getaway</h3>
+            <p data-translate="desc_budapest">A bomb price deal! 4 nights in central boutique hotels, direct flights, personal agent coordination, and hand/trolley bags included. Unmatched city break deal.</p>
+            <div class="dest-actions">
+              <div class="dest-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="dest-rating-val">4.98</span>
+                <span class="dest-rating-count" data-translate="reviews_count_5">(41 reviews)</span>
+              </div>
+              <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="budapest" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
 
-          <!-- Card 4: Bucharest Weekend Holiday (Romania) [NEW] [MIDDLE SPOT] -->
-          <article class="dest-card" data-category="city">
-            <div class="dest-img-container">
-              <img id="img-bucharest" src="" alt="Romanian Athenaeum in Bucharest with flower gardens at sunset">
-              <div class="dest-badges">
-                <span class="dest-tag accent-teal" data-translate="tag_romania">Romania</span>
-                <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
-              </div>
-              <div class="dest-price-badge">
-                <span class="dest-price-val" id="card-price-bucharest">$630</span>
-                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
-              </div>
+        <!-- Card 4: Bucharest Weekend Holiday (Romania) [retreat Bucharest] -->
+        <article class="dest-card" data-category="city" data-retreat="bucharest">
+          <div class="dest-img-container">
+            <img id="img-bucharest" src="" alt="Romanian Athenaeum in Bucharest with flower gardens at sunset">
+            <div class="dest-badges">
+              <span class="dest-tag accent-teal" data-translate="tag_romania">Romania</span>
+              <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
             </div>
-            <div class="dest-info">
-              <div class="dest-meta">
-                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_bucharest_time">4-Night Long Weekend</span></span>
-                <span><i class="fa-solid fa-plane"></i> <span data-translate="meta_bucharest_flights">Wizz Air Included</span></span>
-              </div>
-              <h3 data-translate="title_bucharest">Bucharest 4-Night Relaxing Getaway</h3>
-              <p data-translate="desc_bucharest">Spend a relaxing 4-night weekend in central boutique hotels. Includes direct Wizz Air flights, hand bag + 20kg luggage, personal agent support, and VIP priority car rental options!</p>
-              <div class="dest-actions">
-                <div class="dest-rating">
-                  <i class="fa-solid fa-star"></i>
-                  <span class="dest-rating-val">4.96</span>
-                  <span class="dest-rating-count" data-translate="reviews_count_2">(92 reviews)</span>
-                </div>
-                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="bucharest" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+            <div class="dest-price-badge">
+              <span class="dest-price-val" id="card-price-bucharest">$771</span>
+              <span class="dest-price-unit" data-translate="price_unit_person">/ person</span>
             </div>
-          </article>
+          </div>
+          <div class="dest-info">
+            <div class="dest-meta">
+              <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_bucharest_time">4 Nights</span></span>
+              <span><i class="fa-solid fa-users"></i> <span data-translate="meta_bucharest_guests">2 Adults</span></span>
+            </div>
+            <h3 data-translate="title_bucharest">Bucharest 4-Night Relaxing Getaway</h3>
+            <p data-translate="desc_bucharest">Spend a relaxing 4-night weekend in central boutique hotels. Includes direct Wizz Air flights, hand bag + 20kg luggage, personal agent support, and VIP priority car rental options!</p>
+            <div class="dest-actions">
+              <div class="dest-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="dest-rating-val">4.96</span>
+                <span class="dest-rating-count" data-translate="reviews_count_2">(92 reviews)</span>
+              </div>
+              <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="bucharest" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
 
-          <!-- Card 5: Cyprus Larnaca Beach & City Break (Cyprus) [NEW] -->
-          <article class="dest-card" data-category="beach city">
-            <div class="dest-img-container">
-              <img id="img-cyprus" src="" alt="Beautiful historic Church of Saint Lazarus in Larnaca, Cyprus under a bright blue sky">
-              <div class="dest-badges">
-                <span class="dest-tag accent-teal" data-translate="tag_cyprus">Cyprus Deal</span>
-                <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
-              </div>
-              <div class="dest-price-badge">
-                <span class="dest-price-val" id="card-price-cyprus">$565</span>
-                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
-              </div>
+        <!-- Card 5: Cyprus Larnaca Beach & City Break (Cyprus) [retreat Cyprus] -->
+        <article class="dest-card" data-category="beach city" data-retreat="cyprus">
+          <div class="dest-img-container">
+            <img id="img-cyprus" src="" alt="Beautiful historic Church of Saint Lazarus in Larnaca, Cyprus under a bright blue sky">
+            <div class="dest-badges">
+              <span class="dest-tag accent-teal" data-translate="tag_cyprus">Cyprus Deal</span>
+              <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
             </div>
-            <div class="dest-info">
-              <div class="dest-meta">
-                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_cyprus_time">4-Night Long Weekend</span></span>
-                <span><i class="fa-solid fa-plane"></i> <span data-translate="meta_cyprus_flights">Aegean/Arkia Included</span></span>
-              </div>
-              <h3 data-translate="title_cyprus">Cyprus Larnaca 4-Night Beach &amp; City Break</h3>
-              <p data-translate="desc_cyprus">A dream summer getaway! 4 nights and 5 full days in premium handpicked hotels, direct flights, personal agent coordination, and hand/trolley bags included.</p>
-              <div class="dest-actions">
-                <div class="dest-rating">
-                  <i class="fa-solid fa-star"></i>
-                  <span class="dest-rating-val">4.95</span>
-                  <span class="dest-rating-count" data-translate="reviews_count_6">(58 reviews)</span>
-                </div>
-                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="cyprus" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+            <div class="dest-price-badge">
+              <span class="dest-price-val" id="card-price-cyprus">$692</span>
+              <span class="dest-price-unit" data-translate="price_unit_person">/ person</span>
             </div>
-          </article>
+          </div>
+          <div class="dest-info">
+            <div class="dest-meta">
+              <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_cyprus_time">4 Nights</span></span>
+              <span><i class="fa-solid fa-users"></i> <span data-translate="meta_cyprus_guests">2 Adults</span></span>
+            </div>
+            <h3 data-translate="title_cyprus">Cyprus Larnaca 4-Night Beach &amp; City Break</h3>
+            <p data-translate="desc_cyprus">A dream summer getaway! 4 nights and 5 full days in premium handpicked hotels, direct flights, personal agent coordination, and hand/trolley bags included.</p>
+            <div class="dest-actions">
+              <div class="dest-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="dest-rating-val">4.95</span>
+                <span class="dest-rating-count" data-translate="reviews_count_6">(58 reviews)</span>
+              </div>
+              <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="cyprus" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
 
-          <!-- Card 6: Mykonos Beach Couples Escape (Greece) [NEW] -->
-          <article class="dest-card" data-category="beach">
-            <div class="dest-img-container">
-              <img id="img-mykonos" src="" alt="Beautiful beach front hotel Erato in Mykonos, Greece with sea view">
-              <div class="dest-badges">
-                <span class="dest-tag accent-teal" data-translate="tag_mykonos">Mykonos Deal</span>
-                <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
-              </div>
-              <div class="dest-price-badge">
-                <span class="dest-price-val" id="card-price-mykonos">$1266</span>
-                <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
-              </div>
+        <!-- Card 6: Mykonos Beach Couples Escape (Greece) [retreat Mykonos] -->
+        <article class="dest-card" data-category="beach" data-retreat="mykonos">
+          <div class="dest-img-container">
+            <img id="img-mykonos" src="" alt="Beautiful beach front hotel Erato in Mykonos, Greece with sea view">
+            <div class="dest-badges">
+              <span class="dest-tag accent-teal" data-translate="tag_mykonos">Mykonos Deal</span>
+              <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
             </div>
-            <div class="dest-info">
-              <div class="dest-meta">
-                <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_mykonos_time">5-Night Summer Escape</span></span>
-                <span><i class="fa-solid fa-plane"></i> <span data-translate="meta_mykonos_flights">Blue Bird Flights Included</span></span>
-              </div>
-              <h3 data-translate="title_mykonos">Mykonos Erato Hotel 5-Night Couples Break</h3>
-              <p data-translate="desc_mykonos">A midsummer night's dream in Mykonos, Greece! 5 nights in a beautiful beach-adjacent hotel (Erato Hotel). Includes direct Blue Bird flights, luggage, and 24/7 personal agent accompaniment!</p>
-              <div class="dest-actions">
-                <div class="dest-rating">
-                  <i class="fa-solid fa-star"></i>
-                  <span class="dest-rating-val">4.92</span>
-                  <span class="dest-rating-count" data-translate="reviews_count_7">(76 reviews)</span>
-                </div>
-                <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="mykonos" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
+            <div class="dest-price-badge">
+              <span class="dest-price-val" id="card-price-mykonos">$1266</span>
+              <span class="dest-price-unit" data-translate="price_unit_person">/ person</span>
             </div>
-          </article>
+          </div>
+          <div class="dest-info">
+            <div class="dest-meta">
+              <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_mykonos_time">5 Nights</span></span>
+              <span><i class="fa-solid fa-users"></i> <span data-translate="meta_mykonos_guests">2 Adults</span></span>
+            </div>
+            <h3 data-translate="title_mykonos">Mykonos Erato Hotel 5-Night Couples Break</h3>
+            <p data-translate="desc_mykonos">A midsummer night's dream in Mykonos, Greece! 5 nights in a beautiful beach-adjacent hotel (Erato Hotel). Includes direct Blue Bird flights, luggage, and 24/7 personal agent accompaniment!</p>
+            <div class="dest-actions">
+              <div class="dest-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="dest-rating-val">4.92</span>
+                <span class="dest-rating-count" data-translate="reviews_count_7">(76 reviews)</span>
+              </div>
+              <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="mykonos" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
 
-        </div>
+        <!-- Card 7: Rome Colosseum Sunset City Break (Italy) [retreat Rome] -->
+        <article class="dest-card" data-category="city" data-retreat="rome">
+          <div class="dest-img-container">
+            <img id="img-rome" src="" alt="The historic Roman Colosseum under a vivid orange sunset sky">
+            <div class="dest-badges">
+              <span class="dest-tag accent-teal" data-translate="tag_rome">Rome Deal</span>
+              <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
+            </div>
+            <div class="dest-price-badge">
+              <span class="dest-price-val" id="card-price-rome">$750</span>
+              <span class="dest-price-unit" data-translate="price_unit_person">/ person</span>
+            </div>
+          </div>
+          <div class="dest-info">
+            <div class="dest-meta">
+              <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_rome_time">3 Nights</span></span>
+              <span><i class="fa-solid fa-users"></i> <span data-translate="meta_rome_guests">2 Adults</span></span>
+            </div>
+            <h3 data-translate="title_rome">Rome Colosseum Sunset City Break</h3>
+            <p data-translate="desc_rome">Romantic getaway in Italy! 3 nights in central boutique hotel (Hotel Anglo Americano / Trevi). Includes direct Ryanair flights, priority boarding + trolley, private transfers, and personal agent support!</p>
+            <div class="dest-actions">
+              <div class="dest-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="dest-rating-val">4.94</span>
+                <span class="dest-rating-count" data-translate="reviews_count_rome">(84 reviews)</span>
+              </div>
+              <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="rome" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8: Canopy Jungle Treehouse Lodge (Panama) [retreat Canopy] -->
+        <article class="dest-card" data-category="family" data-retreat="canopy">
+          <div class="dest-img-container">
+            <img id="img-canopy" src="" alt="Lush green tropical rainforest canopy with a cozy wooden treehouse cabin nested inside">
+            <div class="dest-badges">
+              <span class="dest-tag accent-teal" data-translate="tag_panama">Panama Eco</span>
+              <span class="dest-tag accent-orange" data-translate="tag_family_choice">Family Choice</span>
+            </div>
+            <div class="dest-price-badge">
+              <span class="dest-price-val" id="card-price-canopy">$4200</span>
+              <span class="dest-price-unit" data-translate="price_unit_package">/ package</span>
+            </div>
+          </div>
+          <div class="dest-info">
+            <div class="dest-meta">
+              <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_canopy_time">5 Nights</span></span>
+              <span><i class="fa-solid fa-users"></i> <span data-translate="meta_canopy_guests">2 Adults + 2 Kids</span></span>
+            </div>
+            <h3 data-translate="title_canopy">Canopy Jungle Treehouse Lodge</h3>
+            <p data-translate="desc_canopy">Unforgettable eco family retreat! 5 nights in a spectacular treehouse cabin in Panama. Includes direct flights, private transfers, daily guided jungle tours, and all organic meals included!</p>
+            <div class="dest-actions">
+              <div class="dest-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="dest-rating-val">4.91</span>
+                <span class="dest-rating-count" data-translate="reviews_count_canopy">(36 reviews)</span>
+              </div>
+              <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="canopy" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9: Coastal Kayak Active Adventure (Greece) [retreat Kayak] -->
+        <article class="dest-card" data-category="beach" data-retreat="kayak">
+          <div class="dest-img-container">
+            <img id="img-kayak" src="" alt="Adventurous travelers kayaking near spectacular rocky coastal sea caves in crystal blue waters">
+            <div class="dest-badges">
+              <span class="dest-tag accent-teal" data-translate="tag_adventure">Active Adventure</span>
+              <span class="dest-tag accent-orange" data-translate="tag_romantic">Romantic Couples</span>
+            </div>
+            <div class="dest-price-badge">
+              <span class="dest-price-val" id="card-price-kayak">$1450</span>
+              <span class="dest-price-unit" data-translate="price_unit_person">/ person</span>
+            </div>
+          </div>
+          <div class="dest-info">
+            <div class="dest-meta">
+              <span><i class="fa-solid fa-clock"></i> <span data-translate="meta_kayak_time">5 Nights</span></span>
+              <span><i class="fa-solid fa-users"></i> <span data-translate="meta_kayak_guests">2 Adults</span></span>
+            </div>
+            <h3 data-translate="title_kayak">Coastal Kayak Active Adventure</h3>
+            <p data-translate="desc_kayak">Active couples adventure! 5 nights navigating the crystal clear waters of the Greek Islands. Includes specialized sea kayak gear, certified outdoor guides, boutique seaside lodging, and daily breakfasts!</p>
+            <div class="dest-actions">
+              <div class="dest-rating">
+                <i class="fa-solid fa-star"></i>
+                <span class="dest-rating-val">4.95</span>
+                <span class="dest-rating-count" data-translate="reviews_count_kayak">(45 reviews)</span>
+              </div>
+              <a href="https://wa.me/972523279179" target="_blank" class="dest-more-link select-retreat-btn" data-retreat="kayak" data-translate="btn_book_now">Book Deal <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
