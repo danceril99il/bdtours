@@ -760,7 +760,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const filter = btn.getAttribute('data-filter');
       const grid = document.querySelector('.destination-grid');
       
-      if (grid) grid.classList.remove('compact-view');
+      if (grid) {
+        grid.classList.remove('compact-view');
+        grid.classList.remove('single-card-view');
+      }
       
       destCards.forEach(card => {
         const categories = card.getAttribute('data-category').split(' ');
@@ -770,6 +773,9 @@ document.addEventListener('DOMContentLoaded', () => {
           card.classList.add('hidden');
         }
       });
+      
+      // Clean up the URL search parameters so it doesn't keep the single card view on page reload
+      window.history.replaceState({}, document.title, window.location.pathname + `?filter=${filter}`);
     });
   });
 
@@ -898,6 +904,11 @@ Please contact me to finalize flights and accommodation details!`;
     const grid = document.querySelector('.destination-grid');
     if (grid) {
       grid.classList.remove('compact-view');
+      if (retreatParam) {
+        grid.classList.add('single-card-view');
+      } else {
+        grid.classList.remove('single-card-view');
+      }
     }
 
     let activeFilter = filterParam || 'family';
@@ -911,10 +922,22 @@ Please contact me to finalize flights and accommodation details!`;
     
     destCards.forEach(card => {
       const categories = card.getAttribute('data-category').split(' ');
-      if (categories.includes(activeFilter)) {
-        card.classList.remove('hidden');
+      const retreat = card.getAttribute('data-retreat');
+      
+      // If we are showing a specific retreat, hide all other cards!
+      if (retreatParam) {
+        if (retreat === retreatParam) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
       } else {
-        card.classList.add('hidden');
+        // Otherwise filter by category normally
+        if (categories.includes(activeFilter)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
       }
     });
 

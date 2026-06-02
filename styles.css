@@ -788,6 +788,18 @@ img, svg {
   display: none !important;
 }
 
+/* Single Card View Centering Rules */
+.destination-grid.single-card-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.destination-grid.single-card-view .dest-card {
+  max-width: 480px;
+  width: 100%;
+}
+
 .dest-card::before {
   content: '';
   position: absolute;
