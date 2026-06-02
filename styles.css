@@ -325,7 +325,7 @@ img, svg {
    ========================================== */
 .navbar .logo {
   position: relative;
-  width: 380px; /* Reserves enough width for 240px logo + 20px gap + text span */
+  width: 270px; /* Reserves enough width for 160px logo + 15px gap + text span */
   height: 60px;
   display: flex;
   align-items: center;
@@ -334,66 +334,36 @@ img, svg {
 
 .navbar .logo img {
   position: absolute;
-  top: -20px; /* Shifts the logo up to center it in the header height */
+  top: -15px; /* Center it in the header height */
   left: 0;
-  width: 240px; /* 6x larger than the original 40px */
-  height: 240px;
+  width: 160px; /* Consistent legible size on all sections */
+  height: 160px;
   max-width: none;
   max-height: none;
   object-fit: contain;
-  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar .logo span {
-  margin-left: 260px; /* Push the text next to the giant circular logo */
-  font-size: 1.6rem;
+  margin-left: 175px; /* Push the text next to the 160px circular logo */
+  font-size: 1.3rem;
   font-weight: 800;
   white-space: nowrap;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Scrolled header state */
-.navbar.scrolled .logo {
-  width: 270px; /* Reserves enough width for 160px logo + 15px gap + text span */
-}
-
-.navbar.scrolled .logo img {
-  width: 160px; /* Shrinks to 4x size on scroll for enhanced reading area */
-  height: 160px;
-  top: -15px;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
-}
-
-.navbar.scrolled .logo span {
-  margin-left: 175px;
-  font-size: 1.3rem;
-}
-
 /* Responsive Overrides */
 @media (max-width: 1024px) {
   .navbar .logo {
-    width: 300px; /* Tablet sizing adjustment */
+    width: 240px; /* Consistent tablet sizing */
   }
   .navbar .logo img {
-    width: 180px;
-    height: 180px;
-    top: -15px;
-  }
-  .navbar .logo span {
-    margin-left: 195px;
-    font-size: 1.4rem;
-  }
-  
-  .navbar.scrolled .logo {
-    width: 240px;
-  }
-  .navbar.scrolled .logo img {
     width: 140px;
     height: 140px;
     top: -10px;
   }
-  .navbar.scrolled .logo span {
+  .navbar .logo span {
     margin-left: 155px;
     font-size: 1.2rem;
   }
@@ -401,24 +371,15 @@ img, svg {
 
 @media (max-width: 768px) {
   .navbar .logo {
-    width: 100px;
+    width: 80px; /* Consistent mobile sizing */
   }
   .navbar .logo img {
-    width: 100px;
-    height: 100px;
-    top: -10px;
-  }
-  .navbar .logo span {
-    display: none; /* Hide brand text on mobile to give room to hamburger/buttons */
-  }
-  
-  .navbar.scrolled .logo {
-    width: 80px;
-  }
-  .navbar.scrolled .logo img {
     width: 80px;
     height: 80px;
     top: -5px;
+  }
+  .navbar .logo span {
+    display: none; /* Hide brand text on mobile to give room to hamburger/buttons */
   }
 }
 
