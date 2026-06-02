@@ -24,6 +24,20 @@ window.BDToursConfig = {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Dynamic Scroll Handler to scale down the navbar and floating logo on scroll
+  const handleScroll = () => {
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+  };
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Trigger immediately to sync initial load state
+
   // ==========================================
   // CURRENCY TRANSFORMER (NIS is real fare, converted to USD)
   // ==========================================
