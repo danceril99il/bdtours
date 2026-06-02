@@ -1904,6 +1904,21 @@ select.input-style {
   gap: 32px;
 }
 
+[dir="rtl"] .navbar .logo img {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .navbar .logo span {
+  margin-left: 0;
+  margin-right: 175px;
+}
+
+[dir="rtl"] .lang-selector {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
 /* Floating Card Left-to-Right Flip */
 [dir="rtl"] .hero-floating-card {
   left: auto;
@@ -2013,6 +2028,13 @@ select.input-style {
   
   [dir="rtl"] .input-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  [dir="rtl"] .navbar .logo span {
+    margin-left: 0;
+    margin-right: 155px;
   }
 }
 
